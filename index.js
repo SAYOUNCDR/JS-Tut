@@ -150,7 +150,31 @@ comment
 // console.log(min);
 
 //! Random number b/w 1-6
-let rand = Math.floor(Math.random() * 6) + 1;
-console.log(rand);
+// let rand = Math.floor(Math.random() * 6) + 1;
+// console.log(rand);
 
-//! ===> stopped video at 1:11:11 random number program
+//! random number program
+
+// const min = 50;
+// const max = 100;
+// let randomNum;
+
+// const myBtn = document.getElementById("mybtn");
+// const mtLabel = document.getElementById("roll");
+
+// myBtn.onclick = function () {
+//     randomNum = Math.floor(Math.random() * (max - min)) + min;
+//     mtLabel.textContent = `${randomNum}`;
+// }
+
+//! IF STATEMENTS
+// let age = 25;
+// if (age>=18) {
+//     console.log("You are eligible");
+// }
+// else {
+//     console.log("Not eligible");
+// }
+
+//! .checked => property that determines the checked state of an HTML chekbox or radio btn
+
