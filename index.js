@@ -178,3 +178,77 @@ comment
 
 //! .checked => property that determines the checked state of an HTML chekbox or radio btn
 
+// const mySubmit = document.getElementById("mySubmit");
+// const myCheckbox = document.getElementById("myCheckbox");
+// const visaBtn = document.getElementById("visaBtn");
+// const masterCardBtn = document.getElementById("masterCardBtn");
+// const payPalBtn = document.getElementById("payPalBtn");
+// const subResult = document.getElementById("subResult");
+// const paymentResult = document.getElementById("paymentResult");
+
+// mySubmit.onclick = function () {
+//   if (myCheckbox.checked) {
+//     subResult.textContent = `You are subscribed`;
+//     if (visaBtn.checked) {
+//       paymentResult.textContent = `You subscribed to visa`;
+//     } else if (masterCardBtn.checked) {
+//       paymentResult.textContent = `You subscribed to MasterCard`;
+//     } else if (payPalBtn.checked) {
+//       paymentResult.textContent = `You subscribed to PayPal`;
+//     } else {
+//       paymentResult.textContent = `You have not chosen any card`;
+//     }
+//   } else {
+//     subResult.textContent = `You are NOT subscribed`;
+//   }
+// };
+
+//! Ternary operator  condition ? true : false
+// let age = 21;
+// let message = age >= 18 ? "Your are an adult" : "You ar a minor";
+// console.log(message);
+
+//! Switch case
+// let day = "Friday";
+
+// switch (day) {
+//   case "Sunday":
+//     console.log("Sunday");
+//     break;
+//   case "Monday":
+//     console.log("Monday");
+//     break;
+//   case "Tuesday":
+//     console.log("Tuesday");
+//     break;
+//   case "wednesday":
+//     console.log("Wednesday");
+//     break;
+//   case "Friday":
+//     console.log("Friday");
+//     break;
+//   default:
+//     console.log("This is default");
+// }
+
+//! String Methods
+let n = "Sayouyn";
+
+// 1. chatAt(pos);
+// for (let i = 0; i < n.length; i++) {
+//   console.log(n.charAt(i));
+// }
+
+//Another way
+// for (let i = 0; i < n.length; i++) {
+//   console.log(n[i]);
+// }
+
+// 2. indexOf("char")
+// console.log(n.indexOf("y"));
+
+// 3. lastIndexOf("char")
+// console.log(n.lastIndexOf("y"));
+
+// 4. Lenght
+// console.log(n.length);
