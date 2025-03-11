@@ -232,7 +232,7 @@ comment
 // }
 
 //! String Methods
-let n = "Sayouyn";
+let n = "   Sayouyn   ";
 
 // 1. chatAt(pos);
 // for (let i = 0; i < n.length; i++) {
@@ -252,3 +252,13 @@ let n = "Sayouyn";
 
 // 4. Lenght
 // console.log(n.length);
+
+// 5. trim(string)
+// console.log(n.trim());
+
+// 6. toUpperCase() / toLowerCase()
+// console.log(n.toUpperCase());
+// console.log(n.toLowerCase());
+
+// 7. repeat(times)
+// console.log(n.repeat(2));
