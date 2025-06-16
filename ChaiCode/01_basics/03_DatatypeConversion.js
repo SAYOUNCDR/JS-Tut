@@ -5,8 +5,9 @@ console.log(typeof score);
 console.log(typeof score);
 
 let num = "33abc";
-let valueInNumber = Number(num);
+let valueInNumber = Number(num); //cant typecast whole string to integer because of "abc" in the string with number 33 is mixed
 console.log(typeof valueInNumber);
+console.log(num); //string
 console.log(valueInNumber); // Output:NaN (it throws type as number)
 
 let zero = null;
