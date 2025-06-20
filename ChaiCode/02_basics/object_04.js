@@ -1,4 +1,4 @@
-//Nested object
+//Nested objects
 let user = {
   name: "Sayoun",
   deatils: {
@@ -55,3 +55,12 @@ console.log(Object.entries(obj5));
 
 //**Checks if key exist or not in an object
 console.log(user.hasOwnProperty("address"));
+
+
+//**Object destructure
+let newObj = {
+  fullname: "Sayoun Parui",
+  age: 21,
+};
+const { fullname: n } = newObj; //! Very very important
+console.log(n);
