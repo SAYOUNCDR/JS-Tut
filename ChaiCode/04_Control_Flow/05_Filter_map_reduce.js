@@ -61,3 +61,43 @@ let bookName = books.filter((book) => {
 let myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newNumbers = myNumbers.map((num) => num + 10);
 console.log(newNumbers);
+
+//** Chaining (i.e applying multiply maps and filters)
+let chain = [1, 2, 3, 4, 5, 6];
+let afterChain = chain
+  .map((num) => num * 10)
+  .map((num) => num + 5)
+  .filter((num) => num > 25);
+console.log(afterChain);
+
+//** .reduce() is a JavaScript array method used to reduce an array to a single value by applying a callback function on each element.
+// Syntax - array.reduce(callback(accumulator, currentValue), initialValue)
+let reduceArr = [1, 2, 3];
+let sumArr = reduceArr.reduce((acc, currNum) => acc + currNum, 0); //sum of elemnt sof an array
+console.log(sumArr); // Output: 6
+
+//Practice question on .reduce() find total price of product in cart
+const cart = [
+  { name: "Laptop", price: 60000 },
+  { name: "Mobile", price: 20000 },
+  { name: "Watch", price: 5000 },
+  { name: "Headphones", price: 3000 },
+];
+
+let cartSum = cart.reduce((acc, item) => acc + item.price, 0);
+console.log(cartSum);
+
+//Find total items as well as totalPrice
+let cartSummary = cart.reduce(
+  (acc, item) => {
+    acc.totalItems += 1;
+    acc.totalPrice += item.price;
+    return acc;
+  },
+  {
+    totalItems: 0,
+    totalPrice: 0,
+  }
+);
+console.log(`Totoal number of items : ${cartSummary.totalItems}`);
+console.log(`Total price : ${cartSummary.totalPrice}`);
