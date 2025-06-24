@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //Direct function callback in setTimeout
+    setTimeout(function () {
+        console.log("Sayoun 02");
+    }, 2000);
+
+
+    //Passing reference of sunction in setTimeout
+    let sayMyName = function () {
+        console.log("Sayoun 03");
+    }
+    setTimeout(sayMyName, 3000);
+
+
+    //Change text after 4 seconds
+    let changeh1 = function () {
+        document.querySelector('h1').innerHTML = `Best JS Course Till NOw`;
+    }
+    let changeMeTimeout = setTimeout(changeh1, 4000);
+
+
+    //Stop setTimeout function after clicking the button
+    document.querySelector('button').addEventListener
+        ('click', function () {
+            clearTimeout(changeMeTimeout);
+            console.log("Stopped");
+        })
+</script>
+
+</html>

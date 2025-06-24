@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+
+    let intervalId; // Declare globally to access in both functions
+
+    let sayDate = function (str) {
+        console.log(str, Date.now());
+    };
+
+    // Start Interval on 'Start' Button Click
+    document.getElementById('start').addEventListener('click', () => {
+        // Prevent multiple intervals if the start button is clicked repeatedly
+        if (!intervalId) {
+            intervalId = setInterval(sayDate, 1000, "Sayoun");
+        }
+    });
+
+    // Stop Interval on 'Stop' Button Click
+    document.getElementById('stop').addEventListener('click', () => {
+        clearInterval(intervalId);
+        intervalId = null; // Reset to allow restarting
+    });
+
+</script>
+
+</html>

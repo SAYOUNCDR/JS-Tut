@@ -16,7 +16,6 @@ setInterval(function () {
   console.log("Executed every 1 second (repeating)");
 }, 1000);
 
-
 //Stop setInterval [Example]
 let count = 0;
 let timer = setInterval(function () {
@@ -27,3 +26,23 @@ let timer = setInterval(function () {
     console.log("Interval Stopped");
   }
 }, 1000);
+
+// clearTimeout:
+// Stops a function scheduled by setTimeout from running.
+// Used to cancel a one-time delayed execution before it happens.
+
+let timeoutId = setTimeout(function () {
+  console.log("This will not run if cleared.");
+}, 3000);
+
+clearTimeout(timeoutId); // Cancels the timeout
+
+// clearInterval:
+// Stops a function scheduled by setInterval from repeating.
+// Used to stop a repeatedly running function.
+
+let intervalId = setInterval(function () {
+  console.log("Repeating message.");
+}, 1000);
+
+clearInterval(intervalId); // Cancels the interval
