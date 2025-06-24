@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Child</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+
+</body>
+<script>
+    let parent = document.querySelector('.parent');
+    // console.log(parent);
+    // console.log(parent.children); //.children will give HTML Collection of child elements
+
+    // Access a element
+    // console.log(parent.children[1].innerHTML);
+
+    //Acess all child inside parent element using loop
+    for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i].innerHTML);
+    }
+
+    //Imoortant methods
+    // 1. parent.firstElementChild
+    console.log(parent.firstElementChild.innerHTML);
+
+    // 2. parent.lastElementChild
+    console.log(parent.lastElementChild.innerHTML);
+
+    // 3. IF we havae child and want to get parent element use child.parentElement
+    // let childOne = document.querySelector('.day');
+    // console.log(childOne);
+    // console.log(childOne.parentElement);
+    // console.log(childOne.nextElementSibling);
+
+    // 4. NodeLists
+    console.log("NODES: ", parent.childNodes);
+</script>
+
+</html> 

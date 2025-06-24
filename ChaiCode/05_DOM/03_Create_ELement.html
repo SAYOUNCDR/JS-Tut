@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Creation</title>
+</head>
+
+<body style="background-color: black; color: white;">
+
+</body>
+
+<script>
+    // Create Element
+    let div = document.createElement('div');
+
+    // Add className
+    div.className = "main";
+
+    // Add id
+    div.id = "mainid";
+
+    // Add attribute class, id, title
+    div.setAttribute("id", "idDiv");
+    div.setAttribute("class", "classDiv");
+
+    // Style
+    div.style.backgroundColor = "orange";
+    div.style.height = "150px";
+    div.style.width = "350px";
+    div.style.padding = "20px";
+    div.style.textAlign = "center";
+    div.style.borderRadius = "10px";
+
+    // Add content (optional)
+    let textNode = document.createTextNode("Sayoun aur Code")
+    div.appendChild(textNode)
+    // Append to body to make it visible
+    document.body.appendChild(div);
+
+    console.log(div);
+</script>
+
+</html>

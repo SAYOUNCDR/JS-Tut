@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // [1st approach] onclick in script
+    document.getElementById('owl').onclick = () => {
+        alert("Owl click");
+    }
+
+    // [2nd approach] eventLisner (e is object which gives pointer events)
+    document.getElementById('owl').addEventListener('click', (e) => {
+        alert("Owl click");
+    }, false);
+
+
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX clinetY, screenX screenY
+    //altkey, ctrlKey, shigtKey, keyCode
+
+
+
+    //** Bubbling (Event Propagation):
+    // An event triggered on a nested element first runs its own handler,
+    // then propagates (bubbles) up to its parent, grandparent, and so on.
+    document.getElementById('images').addEventListener('click', function (e) {
+        alert("ul clicked");
+    }, false);
+
+    document.getElementById('owl').addEventListener('click', function (e) {
+        alert("Owl clicked");
+        e.stopPropagation(); //To stop bubbling
+    }, false);
+
+    //Explanation : if parent i.e ul(id: images) is clicked then only ul clicked pop up will show
+    // But when child i.e li (id: owl) is clicked the alert inside its function it called and pop up of owl clicked will show 
+    // but also pop of parent i.e ul is clicked will also show this is event propagation
+
+
+
+    //** preventDefault:
+    // A method that stops the browser's default action for an event.
+    // Example: Preventing form submission or link navigation.
+    document.getElementById('google').addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log("Google clicked but not navigated");
+        e.stopPropagation();
+    }, false);
+
+
+    //Images gayab karna jaadu (element.remove())
+    document.getElementById('images').addEventListener
+        ('click', function (e) {
+            if (e.target.tagName == 'IMG') {
+                let removeLi = e.target.parentNode;
+                removeLi.remove();
+            }
+        })
+
+
+</script>
+
+</html>
